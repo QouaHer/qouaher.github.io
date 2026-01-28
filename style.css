@@ -28,4 +28,94 @@ nav {
   z-index: 1000;
 }
 
-na
+nav .logo {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 120px 40px 80px 40px;
+}
+
+/* Headers */
+h1 {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+}
+
+/* Paragraphs & Lists */
+p, li {
+  font-size: 1.05em;
+  margin-bottom: 10px;
+}
+
+/* Links */
+a {
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Publications list */
+#publications ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#publications li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+#publications li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#publications li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
