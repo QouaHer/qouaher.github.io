@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<!-- Navigation -->
 <nav>
   <div class="logo">Qoua Her</div>
   <ul>
@@ -19,6 +20,7 @@
   </ul>
 </nav>
 
+<!-- About Section -->
 <section id="about" class="section">
   <h1>Qoua Her, PharmD, PhD</h1>
   <p>
@@ -28,6 +30,7 @@
   </p>
 </section>
 
+<!-- Research Section -->
 <section id="research" class="section">
   <h2>Research</h2>
   <ul>
@@ -37,13 +40,15 @@
   </ul>
 </section>
 
+<!-- Publications Section -->
 <section id="publications" class="section">
   <h2>Selected Publications</h2>
   <p>
-    See <a href="#">Google Scholar</a> for a full list.
+    See <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> for a full list.
   </p>
 </section>
 
+<!-- Teaching Section -->
 <section id="teaching" class="section">
   <h2>Teaching</h2>
   <p>
@@ -51,14 +56,27 @@
   </p>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="section">
   <h2>Contact</h2>
   <p>
-    Email: your@email.edu<br>
-    <a href="#">Google Scholar</a> |
-    <a href="#">GitHub</a>
+    Email: <a href="mailto:your@email.edu">your@email.edu</a><br>
+    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> | 
+    <a href="https://github.com/qouaher" target="_blank">GitHub</a>
   </p>
 </section>
+
+<!-- Smooth Scroll Script -->
+<script>
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
