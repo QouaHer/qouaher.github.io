@@ -11,6 +11,7 @@ body {
   line-height: 1.6;
   color: #111;
   background-color: #fefefe;
+  scroll-behavior: smooth;
 }
 
 /* Navigation */
@@ -20,21 +21,16 @@ nav {
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 15px 40px;
+  padding: 15px 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   z-index: 1000;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-nav.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 nav .logo {
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 nav ul {
@@ -47,35 +43,25 @@ nav a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
   color: #007bff;
-  transform: translateY(-2px);
 }
 
-/* Section Styling with Blow-Up Animation */
+/* Sections */
 .section {
   max-width: 900px;
   margin: auto;
   padding: 120px 40px 80px 40px;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.section.visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
+/* Headers */
 h1 {
   font-size: 2.2em;
   font-weight: 700;
   margin-bottom: 15px;
-  border-left: 4px solid #007bff;
-  padding-left: 10px;
 }
 
 h2 {
@@ -86,14 +72,10 @@ h2 {
   padding-left: 10px;
 }
 
+/* Paragraphs & Lists */
 p, li {
   font-size: 1.05em;
   margin-bottom: 10px;
-}
-
-ul {
-  padding-left: 20px;
-  margin-bottom: 15px;
 }
 
 /* Links */
@@ -103,6 +85,12 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
 }
 
 /* Responsive */
