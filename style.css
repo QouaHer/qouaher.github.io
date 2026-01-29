@@ -54,7 +54,14 @@ nav a:hover {
 .section {
   max-width: 900px;
   margin: auto;
-  padding: 120px 40px 80px 40px;
+  padding: 120px 40px 80px 40px; /* spacing from top/fixed nav */
+}
+
+/* Fix list bullets for all sections */
+.section ul {
+  list-style-type: disc; /* normal bullets */
+  padding-left: 40px;    /* proper indentation */
+  margin-top: 10px;      /* spacing below header */
 }
 
 /* ================== HEADINGS ================== */
@@ -67,12 +74,12 @@ h1 {
 h2 {
   font-size: 1.8em;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 10px;   /* spacing between header and list/paragraph */
   border-left: 4px solid #007bff;
   padding-left: 10px;
 }
 
-/* ================== PARAGRAPHS & LISTS ================== */
+/* ================== PARAGRAPHS & LIST ITEMS ================== */
 p, li {
   font-size: 1.05em;
   margin-bottom: 10px;
@@ -90,7 +97,7 @@ a:hover {
 
 /* ================== PUBLICATIONS ================== */
 #publications ul {
-  list-style-type: none;
+  list-style-type: none; /* no bullets for publications list */
   padding-left: 0;
 }
 
@@ -116,13 +123,13 @@ a:hover {
 }
 
 .social-icons a {
-  font-size: 1.5em;      /* size of icons */
-  color: #007bff;        /* default color */
+  font-size: 1.5em;
+  color: #007bff;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #0056b3;        /* darker on hover */
+  color: #0056b3;
   transform: translateY(-2px);
 }
 
