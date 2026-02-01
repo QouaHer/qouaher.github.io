@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Qoua Her</title>
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
@@ -31,14 +31,44 @@
 <!-- About Section -->
 <section id="about" class="section">
   <h1>Qoua Her</h1>
-  <p>
-    Pharmacist, Informatician, and Pharmacoepidemiologist<br>
-<p>
-I am an NIDDK-funded postdoctoral research fellow and PhD student in Epidemiology in the Department of Epidemiology at the Gillings School of Global Public Health at the University of North Carolina at Chapel Hill, under the mentorship of Drs. Til Stürmer, Michele Jonsson-Funk, John Buse, and Jessica Edwards. My research focuses on applied epidemiologic methods to support valid pharmacovigilance (drug safety signal detection) and pharmacoepidemiology (signal strengthening and confirmation) studies, with additional interests in evaluating drug use policy and regulation.
-In addition, I am a Pharmacist Informatician and Pharmacoepidemiologist at the Center for Medication Safety within the Department of Veterans Affairs (VA MedSAFE). In this role, I provide study design and biostatistical expertise to pharmacists responding to drug safety signals identified by the Medical Advisory Panel and contribute to the assessment and redesign of the VA Adverse Drug Event Reporting System (VA ADERS).
-<p>
-Prior to my time at UNC, I served as a Pharmacist Informatician at the Harvard Pilgrim Health Care Institute under the mentorship of Dr. Sengwee Darren Toh, and as a Pharmacy Informatics Fellow at Brigham and Women’s Hospital under Drs. David Bates, Andrew Seger, and Mary Amato. I also spent time as a PGY-1 Managed Care Pharmacy Residency at the Kansas City VA Medical Center and have experience practicing as a pharmacist in both community and acute care settings.
 
+  <p>
+    Pharmacist, Informatician, and Pharmacoepidemiologist
+  </p>
+
+  <p>
+    I am an NIDDK-funded postdoctoral research fellow and PhD student in
+    Epidemiology in the Department of Epidemiology at the Gillings School of
+    Global Public Health at the University of North Carolina at Chapel Hill,
+    under the mentorship of Drs.
+    <a href="https://sph.unc.edu/adv_profile/til-sturmer-md-phd/" target="_blank">
+      Til Stürmer
+    </a>,
+    Michele Jonsson-Funk, John Buse, and Jessica Edwards.
+    My research focuses on applied epidemiologic methods to support valid
+    pharmacovigilance (drug safety signal detection) and
+    pharmacoepidemiology (signal strengthening and confirmation) studies,
+    with additional interests in evaluating drug use policy and regulation.
+  </p>
+
+  <p>
+    In addition, I am a Pharmacist Informatician and Pharmacoepidemiologist
+    at the Center for Medication Safety within the Department of Veterans
+    Affairs (VA MedSAFE). In this role, I provide study design and
+    biostatistical expertise to pharmacists responding to drug safety
+    signals identified by the Medical Advisory Panel and contribute to the
+    assessment and redesign of the VA Adverse Drug Event Reporting System
+    (VA ADERS).
+  </p>
+
+  <p>
+    Prior to my time at UNC, I served as a Pharmacist Informatician at the
+    Harvard Pilgrim Health Care Institute under the mentorship of
+    Dr. Sengwee Darren Toh, and as a Pharmacy Informatics Fellow at
+    Brigham and Women’s Hospital under Drs. David Bates, Andrew Seger,
+    and Mary Amato. I also completed a PGY-1 Managed Care Pharmacy
+    Residency at the Kansas City VA Medical Center and have experience
+    practicing as a pharmacist in both community and acute care settings.
   </p>
 </section>
 
@@ -60,8 +90,13 @@ Prior to my time at UNC, I served as a Pharmacist Informatician at the Harvard P
   </ul>
   <p>
     For a complete list of my publications, see:
-    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> |
-    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=her%2C+qoua&sort=date" target="_blank">PubMed</a>
+    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+      Google Scholar
+    </a>
+    |
+    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=her%2C+qoua&sort=date" target="_blank">
+      PubMed
+    </a>
   </p>
 </section>
 
@@ -77,17 +112,21 @@ Prior to my time at UNC, I served as a Pharmacist Informatician at the Harvard P
 <section id="contact" class="section">
   <h2>Contact</h2>
   <p>
-    Email: <a href="mailto:your@email.edu">your@email.edu</a>
+    Email:
+    <a href="mailto:your@email.edu">your@email.edu</a>
   </p>
+
   <div class="social-icons">
     <!-- Email -->
     <a href="mailto:your@email.edu" title="Email">
       <i class="fas fa-envelope"></i>
     </a>
+
     <!-- GitHub -->
     <a href="https://github.com/qouaher" target="_blank" title="GitHub">
       <i class="fab fa-github"></i>
     </a>
+
     <!-- LinkedIn -->
     <a href="https://www.linkedin.com/in/qouaher" target="_blank" title="LinkedIn">
       <i class="fab fa-linkedin"></i>
@@ -99,7 +138,7 @@ Prior to my time at UNC, I served as a Pharmacist Informatician at the Harvard P
 <script>
 // Smooth scrolling
 document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       behavior: 'smooth'
@@ -109,19 +148,23 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 // Random 3 publications from PubMed
 async function loadRandomPublications() {
-  const searchUrl = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=her,+qoua&retmax=20&retmode=json";
+  const searchUrl =
+    "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=her,+qoua&retmax=20&retmode=json";
+
   try {
     const res = await fetch(searchUrl);
     const data = await res.json();
     const ids = data.esearchresult.idlist;
 
     const randomIds = [];
-    while(randomIds.length < 3 && ids.length > 0){
+    while (randomIds.length < 3 && ids.length > 0) {
       const index = Math.floor(Math.random() * ids.length);
-      randomIds.push(ids.splice(index,1)[0]);
+      randomIds.push(ids.splice(index, 1)[0]);
     }
 
-    const summaryUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${randomIds.join(",")}&retmode=json`;
+    const summaryUrl =
+      `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${randomIds.join(",")}&retmode=json`;
+
     const summaryRes = await fetch(summaryUrl);
     const summaryData = await summaryRes.json();
 
@@ -132,14 +175,16 @@ async function loadRandomPublications() {
       const paper = summaryData.result[id];
       const li = document.createElement("li");
       li.innerHTML = `
-        <strong>${paper.title}</strong>. 
+        <strong>${paper.title}</strong>.
         <em>${paper.fulljournalname}</em>. ${paper.pubdate}.
-        <a href="https://pubmed.ncbi.nlm.nih.gov/${id}/" target="_blank">PubMed</a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/${id}/" target="_blank">
+          PubMed
+        </a>
       `;
       pubList.appendChild(li);
     });
 
-  } catch(err) {
+  } catch (err) {
     console.error("Error fetching publications:", err);
   }
 }
