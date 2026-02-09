@@ -59,7 +59,7 @@ nav a:hover {
 .section {
   max-width: 900px;
   margin: 40px auto; /* spacing between sections */
-  padding: 120px 40px 80px 40px; /* spacing from top/fixed nav */
+  padding: 60px 40px 40px 40px; /* spacing from top/fixed nav */
   
   /* Page-like effect */
   background-color: rgba(255, 255, 255, 0.9);
